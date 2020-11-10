@@ -13,7 +13,7 @@ export default {
     ...mapState(['isPC'])
   }),
   mounted() {
-    this.initVideo();
+    // this.initVideo();
   },
   methods: {
     initVideo() {

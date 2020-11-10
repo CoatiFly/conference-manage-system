@@ -4,6 +4,8 @@ import Router from 'vue-router'
 // page
 import Login from '@/views/login/index.vue'
 import Index from '@/views/index/index.vue'
+import StandardContainer from '@/views/container/container.vue'
+
 
 Vue.use(Router)
 
@@ -19,9 +21,17 @@ export default new Router({
       component: Login,
     },
     {
-      path: '/index',
-      name: 'Index',
-      component: Index,
+      path: '/console',
+      name: 'console',
+      component: StandardContainer,
+      children: [
+        {
+          path: '/index',
+          name: 'Index',
+          component: Index,
+        },
+      ]
     },
+
   ]
 })
