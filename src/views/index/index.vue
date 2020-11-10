@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="MeetingIn-progress">
-      <p style="margin-top: 20px;color: #595F69; font-size: 18px;">进行中会议</p>
+      <div class="text-des" style="margin-top: 20px;color: #595F69; font-size: 18px;border:none;">进行中会议</div>
       <div v-for="(item, index) in meetInProgress" :key="index">
         <p>{{item.meetPosition}}</p>
         <h2>{{item.meetName}}</h2>
@@ -221,6 +221,12 @@ export default {
       .meetingMember {
         display: flex;
         justify-content: flex-start;
+      }
+      .text-des {
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        margin-top: 0px;
       }
       div {
         width: 80%;
