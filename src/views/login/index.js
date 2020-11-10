@@ -26,7 +26,7 @@ export default {
         StorageService.saveUser(this.userInfo);
         setTimeout(() => {
           this.popupStatus = false;
-          this.$tool.go('Index');
+          this.$tool.go('Homepage');
         }, 2000);
       }else{
         this.$message.error('用户名或密码错误！');

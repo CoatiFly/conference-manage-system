@@ -6,7 +6,6 @@
         <ul class="menu_list">
           <li
           class="menu_item"
-          :key="index"
           :class="{active: activeName === 'Homepage'}"
           @click="switchMenu('Homepage')">
             <img src="@/assets/icon-board-hover.png" alt="展示" v-if="activeName === 'Homepage'">
@@ -14,7 +13,6 @@
           </li>
           <li
           class="menu_item"
-          :key="index"
           :class="{active: activeName === 'MeetingList'}"
           @click="switchMenu('MeetingList')">
             <img src="@/assets/icon-list-hover.png" alt="展示" v-if="activeName === 'MeetingList'">
@@ -113,7 +111,7 @@ export default {
             background-color:rgba($color: #fff, $alpha: .2);
           }
           &.active{
-            background-color:rgba($color: #fff, $alpha: .2);
+            background-color:rgba($color: #fff, $alpha: .8);
           }
           img{
             display: inline-block;

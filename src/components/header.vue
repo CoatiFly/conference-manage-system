@@ -5,7 +5,7 @@
       <li class="nav_item" @click="goItemPage('Homepage')">
         <div class="company_box">
           <img src="@/assets/logo.png"/>
-          <!-- <div class="title">{{title}}</div> -->
+          <div class="title">{{title}}</div>
         </div>
       </li>
       <!-- 搜索 -->
@@ -47,7 +47,7 @@ export default {
     return {
       spaceName: 'daocloud',
       isActive: '',
-      title: '会议管理系统',
+      title: '大白菜会议管理系统',
       searchName: '',
     };
   },
@@ -100,18 +100,17 @@ export default {
       }
       .company_box{
         float: left;
-        height: 72px;
         overflow: hidden;
         cursor: pointer;
         img {
-          height: 30px;
+          height: 40px;
           float: left;
         }
         .title{
           padding-left: 10px;
           line-height: 36px;
-          font-size: 14px;
-          color: #ccd1d9;
+          font-size: 16px;
+          color:rgba($color: #fff, $alpha: .8);
           overflow: hidden;
         }
       }

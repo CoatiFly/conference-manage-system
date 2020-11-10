@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '@/store/index';
 
 // page
 import Login from '@/views/login/index.vue'
-import Index from '@/views/index/index.vue'
+import Homepage from '@/views/index/index.vue'
 import StandardContainer from '@/views/container/container.vue'
 
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -27,11 +28,20 @@ export default new Router({
       children: [
         {
           path: '/index',
-          name: 'Index',
-          component: Index,
+          name: 'Homepage',
+          component: Homepage,
+          meta: {
+            type: 'Homepage',
+          },
         },
       ]
     },
-
   ]
-})
+});
+router.beforeEach((to, from, next) => {
+  /* 记住刷新前路由 */
+  // console.log(to.meta.type);
+  store.dispatch('router/setActiveName', to.meta.type);
+  next();
+});
+export default router;
