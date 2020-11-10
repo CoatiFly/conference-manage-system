@@ -31,7 +31,7 @@ export default {
       const local = window.location;
       // console.log(local);
       // const local = window.location;
-      this.url = local.origin + 'v1/meeting/1/image';
+      this.url = local.origin + '/v1/meeting/1/image';
     },
   },
 };
