@@ -4,7 +4,9 @@ import store from '@/store/index';
 
 // page
 import Login from '@/views/login/index.vue'
-import Homepage from '@/views/index/index.vue'
+import Index from '@/views/index/index.vue'
+import Form from '@/views/form/form.vue'
+import Detail from '@/views/detail/detail.vue'
 import StandardContainer from '@/views/container/container.vue'
 
 
@@ -29,11 +31,27 @@ const router = new Router({
         {
           path: '/index',
           name: 'Homepage',
-          component: Homepage,
+          component: Index,
           meta: {
             type: 'Homepage',
           },
         },
+        {
+          path: '/form',
+          name: 'MeetingList', 
+          component: Form,
+          meta: {
+            type: 'MeetingList',
+          },
+        },
+        {
+          path: '/detail',
+          name: 'Detail', 
+          component: Detail,
+          meta: {
+            type: 'MeetingList',
+          },
+        }
       ]
     },
   ]

@@ -1,0 +1,23 @@
+.form {
+  padding-bottom: 30px;
+  .header {
+    padding: 0 30px;
+    color: rgb(170, 176, 186);
+    font-size: 20px;
+  }
+  .container {
+    padding: 0 30px;
+    .title {
+      display: flex;
+      align-items: center;
+      color: rgb(170, 176, 186);
+      height: 50px;
+      div {
+        flex: 1;
+      }
+      .meetName {
+        padding-left: 20px;
+      }
+    }
+  }
+}

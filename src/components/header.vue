@@ -71,6 +71,7 @@ export default {
     // 个人信息
     handleCommand(command) {
       if (command === "exit") {
+        this.$tool.go('Login');
         // AuthService.logout();
       } else {
         this.isActive = '';
