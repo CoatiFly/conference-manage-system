@@ -9,7 +9,7 @@
         <!-- 时间 -->
         <div class="box">
           <i class="el-icon-date"></i>
-          <span style="padding-left:10px;">11/10 10:00:00 - 11/10 11:00:00</span>
+          <span style="padding-left:10px;">{{ data.Start }} - {{ data.End }}</span>
         </div>
         <!-- 地点 -->
         <div class="box">
@@ -19,7 +19,7 @@
         <!-- 会议主题 -->
         <div class="box">
           <i class="el-icon-postcard"></i>
-          <span style="padding-left:10px;">一次简单的快速会议</span>
+          <span style="padding-left:10px;">{{ data.Topic }}</span>
         </div>
         <!-- 会议人 -->
         <div class="box">
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="right">
-        <img src="./avator.jpg" class="size">
+        <img :src="url" class="size">
       </div>
     </div>
     <div class="cantainer">
@@ -69,21 +69,28 @@
         </div>
         <div class="box">
           <i class="el-icon-user"></i>
-          <span style="padding-left:10px;">王光明、解澎、林佳豪、贺艳芬、刘琨</span>
+          <span style="padding-left:10px;">王光明、解澎</span>
         </div>
         <div class="box">
           <i class="el-icon-user"></i>
-          <span style="padding-left:10px;">小明、小红</span>
+          <span style="padding-left:10px;">林佳豪、贺艳芬</span>
         </div>
         <div class="box">
           <i class="el-icon-user"></i>
-          <span style="padding-left:10px;">张三、李四</span>
+          <span style="padding-left:10px;">刘琨</span>
         </div>
+      </div>
+    </div>
+    <div class="cantainer">
+      <div class="left">
+        <div class="title">
+          会议记录
+        </div>
+        <div v-for="(data, index) in record" :key="index" style="padding-left: 20px;padding-bottom: 5px;">{{ data }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script src="./detail.js"></script>
-
 <style src="./detail.scss" lang="scss" scoped></style>

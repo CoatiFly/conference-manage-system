@@ -2,7 +2,7 @@
 /* eslint-disable */
 import { Message } from 'element-ui';
 import { get as getValue } from 'lodash';
-import AuthService from '@/services/auth.service';
+// import AuthService from '@/services/auth.service';
 
 const errorMessage = (message) => {
   Message({
@@ -30,7 +30,7 @@ export default {
         errorMessage('网络异常，请稍后再试');
         break;
       case 401:
-        AuthService.logout();
+        // AuthService.logout();
         break;
       case 403:
         if (getValue(response, 'headers.Authorization')) {
