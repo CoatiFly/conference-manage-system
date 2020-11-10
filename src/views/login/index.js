@@ -1,4 +1,4 @@
-import { mapState } from 'vuex'
+import StorageService from '@/services/storage.service';
 
 export default {
   name: 'Login',
@@ -16,17 +16,14 @@ export default {
       popupStatus: false,
     };
   },
-  computed: mapState({
-    ...mapState(['isPC'])
-  }),
-  mounted() {
-    console.log(this.isPC)
-  },
+
   methods: {
     // login
     onSubmit() {
       this.popupStatus = true;
       if(this.form.username === this.userInfo.username && this.form.password === this.userInfo.password) {
+        this.$store.dispatch('auth/setUserInfo', this.userInfo);
+        StorageService.saveUser(this.userInfo);
         setTimeout(() => {
           this.popupStatus = false;
           this.$tool.go('Index');

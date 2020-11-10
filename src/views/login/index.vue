@@ -1,6 +1,7 @@
 <template>
-  <div :class=" isPC ? 'login-page' : 'mobile-login-page'">
+  <div class="login-page">
     <div class="login-form-container">
+      <div class="project_title">会议管理后台</div>
       <el-form
         class="login-form"
         :model="form"
@@ -27,8 +28,6 @@
         </el-form-item>
       </el-form>
     </div>
-    <!-- 弹层 -->
-    <div class="popup_box" v-if="popupStatus"></div>
   </div>
 </template>
 

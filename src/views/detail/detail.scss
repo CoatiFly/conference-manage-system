@@ -1,6 +1,5 @@
 .Detail {
-  padding: 30px 100px;
-  background: rgb(242, 245, 248);
+  overflow: hidden;
   .header {
     font-size: 20px;
     font-weight: 600;
@@ -16,6 +15,7 @@
       background: #fff;
       border-radius: 8px;
       margin-bottom: 20px;
+      background: rgb(242, 245, 248);
       .title {
         height: 50px;
         line-height: 50px;

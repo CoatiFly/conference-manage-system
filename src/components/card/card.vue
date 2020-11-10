@@ -1,7 +1,7 @@
 <template>
   <div class="card-meeting" >
     <div v-for="(data, index) in meet" :key="index" class="card">
-      <div class="meetName">{{ data.meetName }}</div>
+      <div class="meetName" @click="linkTo">{{ data.meetName }}</div>
       <div>{{ data.meetRoom }}</div>
       <div>{{ data.meetTime }}</div>
       <div class="new-meeter">
@@ -29,6 +29,14 @@ export default {
   props: {
     meet: Array,
   },
+
+  methods: {
+    linkTo() {
+      this.$router.push({
+        name: 'Detail',
+      })
+    },
+  }
 }
 </script>
 
@@ -37,7 +45,7 @@ export default {
   .card {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: #f2f5f8;
     width: 100%;
     height: 70px;
     border-radius: 12px;
@@ -48,6 +56,8 @@ export default {
     }
     .meetName {
       padding-left: 20px;
+      cursor: pointer;
+      color: rgb(50, 73, 204)
     }
     .new-meeter {
       position: relative;

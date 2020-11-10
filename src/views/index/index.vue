@@ -6,6 +6,9 @@
         <!-- <source src="http://106.75.35.38/video/57_0122_v01.mov" type="video/mp4"> -->
       </video>
     </div>
+    <!-- <div class="video_box">
+      aaaa
+    </div> -->
 </template>
 
 <script src='./index.js'></script>

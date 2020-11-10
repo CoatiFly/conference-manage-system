@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store/index'
 import router from './router'
-import store from './store/store'
+import Components from '@/components';
 
-import Video from 'video.js'
-import 'video.js/dist/video-js.css'
+
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
@@ -12,19 +12,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import tools from './tools';
 import './styles/index.scss';
 Vue.prototype.$tool = tools.newRouter;
-Vue.prototype.$video = Video;
-
-// is PC
-if (tools.newUtils.isPC()) {
-  store.commit("setIsPC", true);
-} else {
-  tools.remJs();
-  store.commit("setIsPC", false);
-};
 
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
+Vue.use(Components);
 
 new Vue({
   router,
