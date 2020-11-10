@@ -4,6 +4,8 @@ import Router from 'vue-router'
 // page
 import Login from '@/views/login/index.vue'
 import Index from '@/views/index/index.vue'
+import Form from '@/views/form/form.vue'
+import Detail from '@/views/detail/detail.vue'
 
 Vue.use(Router)
 
@@ -23,5 +25,15 @@ export default new Router({
       name: 'Index',
       component: Index,
     },
+    {
+      path: '/form',
+      name: 'Form', 
+      component: Form,
+    },
+    {
+      path: '/detail',
+      name: 'Detail', 
+      component: Detail,
+    }
   ]
 })
