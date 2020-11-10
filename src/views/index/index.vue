@@ -76,7 +76,7 @@
 
 <script>
 export default {
-  name: 'test',
+  name: 'Homepage',
   data() {
     return {
       thingsDetail: [{
