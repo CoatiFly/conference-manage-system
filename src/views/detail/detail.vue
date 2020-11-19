@@ -1,5 +1,5 @@
 <template>
-  <div class="Detail" v-if="isShow">
+  <div class="Detail">
     <div class="header">
       简单的会议 - 2020
     </div>
@@ -9,7 +9,7 @@
         <!-- 时间 -->
         <div class="box">
           <i class="el-icon-date"></i>
-          <span style="padding-left:10px;">{{ data.Start }} - {{ data.End }}</span>
+          <span style="padding-left:10px;">{{ passFive }} - {{ curTime }}</span>
         </div>
         <!-- 地点 -->
         <div class="box">
@@ -19,7 +19,7 @@
         <!-- 会议主题 -->
         <div class="box">
           <i class="el-icon-postcard"></i>
-          <span style="padding-left:10px;">{{ data.Topic }}</span>
+          <span style="padding-left:10px;">今晚吃啥</span>
         </div>
         <!-- 会议人 -->
         <div class="box">
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="right">
-        <img :src="url" class="size">
+        <img src="./avator.jpg" class="size">
       </div>
     </div>
     <div class="cantainer">
