@@ -1,4 +1,3 @@
-import axios from 'axios';
 import meetingService from '../../services/getmeet'
 
 export default {
@@ -20,7 +19,9 @@ export default {
   methods: {
     getMeet() {
       meetingService.listMeet().then(res => {
-        this.data = res.data;
+        if (res.data) {
+          this.data = res.data;
+        }
       });
     },
     getUrl() {
@@ -29,7 +30,9 @@ export default {
     },
     getRecord() {
       meetingService.listRecord().then(res => {
-        this.record = res.Text.split('\n');
+        if (res) {
+          this.record = res.Text.split('\n');
+        }
       })
     }
   },
