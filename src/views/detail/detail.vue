@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="right">
-        <img src="./avator.jpg" class="size">
+        <img :src="url" class="size">
       </div>
     </div>
     <div class="cantainer">
