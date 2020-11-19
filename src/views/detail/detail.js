@@ -11,11 +11,19 @@ export default {
       url: '',
     };
   },
+  
+  computed: {
+    isShow() {
+      return Object.keys(this.data).length && this.record.length;
+    }
+  },
+
   created() {
     this.getMeet();
     this.getRecord();
     this.getUrl();
   },
+
   methods: {
     getMeet() {
       meetingService.listMeet().then(res => {
