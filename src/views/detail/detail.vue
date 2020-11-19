@@ -1,5 +1,5 @@
 <template>
-  <div class="Detail">
+  <div class="Detail" v-if="Object.keys(data).length && record.length">
     <div class="header">
       简单的会议 - 2020
     </div>
